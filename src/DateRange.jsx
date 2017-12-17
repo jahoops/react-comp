@@ -3,9 +3,11 @@
 import React from 'react';
 
 class DateRange extends React.Component {
-
+  constructor(props) {
+    super(props);
+  }
   render() {
-    return <div>DateRange</div>;
+    return <div>{this.props.text}</div>;
   }
 
 };
