@@ -22,7 +22,8 @@
   },
   "scripts": {
     "dev": "webpack --watch --inline",
-    "prepublish": "babel ./src --out-dir ./lib --source-maps --presets es2015,react --plugins babel-plugin-add-module-exports && browserify ./lib/Location.js -o ./build/react-place.js --transform browserify-global-shim --standalone ReactPlace && uglifyjs ./build/react-place.js --compress --mangle --output ./build/react-place.min.js --source-map ./build/react-place.min.js.map",
+    "publishDateRange": "babel ./src --out-dir ./lib --source-maps --presets es2015,react --plugins babel-plugin-add-module-exports && browserify ./lib/DateRange.js -o ./build/DateRange.js --transform browserify-global-shim --standalone DateRange && uglifyjs ./build/DateRange.js --compress --mangle --output ./build/DateRange.min.js --source-map ./build/DateRange.min.js.map",
+    "publishHello": "babel ./src --out-dir ./lib --source-maps --presets es2015,react --plugins babel-plugin-add-module-exports && browserify ./lib/Hello.js -o ./build/Hello.js --transform browserify-global-shim --standalone Hello && uglifyjs ./build/Hello.js --compress --mangle --output ./build/Hello.min.js --source-map ./build/Hello.min.js.map",
     "test": "karma start",
     "test:ci": "watch 'npm run test' src/",
     "example-es5-browserify": "browserify ./example-es5-browserify/src/index.js -o ./example-es5-browserify/build/app.js"
