@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Location</title>
+</head>
+<body>
+  <div class="content">
+    <div id="hello"></div><div id="date"></div>
+  </div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.9/react.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.9/react-dom.js"></script>
+  <script type="text/javascript" src="../build/Hello.js"></script>
+  <script type="text/javascript" src="../build/DateRange.js"></script>
+  <script>
+
+    window.onload = function () {
+      console.log(Hello, DateRange);
+      var hello = document.querySelector('#hello');
+      var rh = React.createElement(Hello);
+      var dh = ReactDOM.render(rh, hello);
+      var date = document.querySelector('#date');
+      var r = React.createElement(DateRange,{text:'howdy'});
+      var d = ReactDOM.render(r, date);
+    };
+
+  </script>
+</body>
+</html>
